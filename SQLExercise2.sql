@@ -28,8 +28,6 @@ FROM employees
 WHERE MiddleInitial IS NULL;
 
 -- find distinct product prices
-SELECT *
-FROM products;
 SELECT DISTINCT PRice
 FROM Prodcuts;
 
@@ -40,25 +38,25 @@ WHERE FirtName LIKE "j%";
 
 -- find all Macbooks
 SELECT *
-FROM prodcuts
-WHERE Name LIKE "MacB&";
+FROM products
+WHERE Name LIKE "%macbook%";
 
 -- find all products that are on sale
 SELECT *
-FROM Products 
-WHERE Not OnSale = 0;
+FROM products 
+WHERE OnSale = 1;
 
 -- find the average price of all products
 SELECT AVG(price) AS "Average Price"
 FROM products;
 
--- find all Geek Squad employees who don't have a middle initialSELECT * FROM employees
+-- find all Geek Squad employees who don't have a middle initial
   SELECT *
   FROM employees
   WHERE MiddleInitial IS NULL
   AND Title = "Geek Squad";
  
--- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keywordSELECT * FROM products
+-- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
 SELECT *
 FROM prodcuts
 WHERE StockLevel BETWEEN 500 AND 1200
